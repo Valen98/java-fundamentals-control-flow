@@ -52,18 +52,19 @@ public class Extension extends ExtensionBase {
      */
 
     public int calculateGramsOfSugar(String[] ingredients, int layers) {
-        int counter = 3;
-        for (String ingredient : ingredients) {
+         for (String ingredient : ingredients) {
             if (ingredient.equals("sugar")) {
-                counter--;
+                return layers * 100;
             }
-
         }
-        if(counter > 2) {
-            return layers * 100;
-        }else {
-            return 0;
-        }
+        return 0;
+        /*
 
+        for (int i =0; i < ingredients.length; i++) {
+            if(ingredients[i].equals("sugar")) return layers * 100;
+        }
+        return 0;
+
+         */
     }
 }
